@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Call Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo-box">SC</div>
+        <div>
+          <p class="brand-name">Service Call</p>
+          <p class="brand-sub">Analysis</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="nav-item active" href="#">Dashboard</a>
+        <a class="nav-item" href="#compliance">Call Stages</a>
+        <a class="nav-item" href="#insights">Insights</a>
+        <a class="nav-item" href="#emotion">Emotion</a>
+        <a class="nav-item" href="#timeline">Timeline</a>
+        <a class="nav-item" href="#transcript">Transcript</a>
+      </nav>
+      <div class="footer-note">HVAC visit · 32:17</div>
+    </aside>
+
+    <div class="content-pane">
+      <header class="topbar">
+        <div>
+          <h1>Call Dashboard</h1>
+          <p class="lede">Technician vs Customer performance snapshot</p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section id="radar">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Overview</p>
+              <h2>Call stage effectiveness</h2>
+            </div>
+          </div>
+          <div id="radar-chart" class="card radar-card"></div>
+        </section>
+
+        <section id="summary-cards">
+          <div class="metrics" id="summary-list"></div>
+        </section>
+
+        <section id="compliance">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Call Stages</p>
+              <h2>Structure & coverage</h2>
+            </div>
+          </div>
+          <div class="grid" id="compliance-items"></div>
+        </section>
+
+        <section class="split" id="insights">
+          <div class="card panel">
+            <p class="eyebrow">Sales Insights</p>
+            <h2>Signals</h2>
+            <ul class="insight-list" id="insights-list"></ul>
+          </div>
+          <div class="card panel">
+            <p class="eyebrow">Next Steps</p>
+            <h2>Actions</h2>
+            <ol class="actions-list" id="actions-list"></ol>
+          </div>
+        </section>
+
+        <section id="emotion">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Emotion</p>
+              <h2>Speaker sentiment</h2>
+            </div>
+          </div>
+          <div class="grid" id="emotion-cards"></div>
+          <div class="grid" id="emotion-pies"></div>
+        </section>
+
+        <div id="emotion-modal" class="modal">
+          <div class="modal-content" id="emotion-modal-content">
+            <button class="close-btn" id="emotion-modal-close">×</button>
+            <div id="emotion-modal-body"></div>
+          </div>
+        </div>
+
+        <section id="timeline">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Timeline</p>
+              <h2>Key moments</h2>
+            </div>
+          </div>
+          <div class="grid timeline" id="timeline-items"></div>
+        </section>
+
+        <section id="transcript">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Transcript</p>
+              <h2>Playback text</h2>
+              <p class="section-note" id="speaker-stats"></p>
+            </div>
+            <div class="transcript-actions" id="transcript-links">
+              <a class="pill" href="data/transcript_with_speakers.txt" download>Download labeled</a>
+              <a class="pill" href="data/transcript_with_timestamps.txt" download>Download raw</a>
+            </div>
+          </div>
+          <pre id="transcript-body" class="transcript"></pre>
+          <p class="section-note" id="transcript-status"></p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

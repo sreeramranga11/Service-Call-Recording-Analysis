@@ -1,0 +1,4 @@
+openai-whisper==20250625
+openai>=1.52.0
+python-dotenv>=1.0.1
+transformers>=4.44.2
