@@ -8,14 +8,6 @@ __pycache__/
 # Pip cache / downloads
 .cache/
 
-# Audio/transcript intermediates (regenerable)
-audio.wav
-data/chatgpt_speaker_prompt.txt
-data/emotion_analysis.json
-data/transcript_with_speakers.json
-data/transcript_with_speakers.txt
-data/transcript_with_timestamps.txt
-
 # Whisper model artifacts
 .whisper/
 
